@@ -8,6 +8,7 @@ verify_ssl = true
 [packages]
 sphinx = "*"
 sphinx-rtd-theme = "*"
+sphinxcontrib-domaintools = {git = "https://github.com/pizzacat83/domaintools"}
 
 [requires]
 python_version = "3.7"

@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "ad49cdffc75c09b6abfb00f80a96f9c4967858dfc7153f34febb993592308482"
+            "sha256": "edd1d88f054b7399bf5e8f53fde9546ee4d013c3b5b4469f298e038763347c16"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -183,6 +183,10 @@
                 "sha256:9512ecb00a2b0821a146736b39f7aeb90759834b07e81e8cc23a9c70bacb9981"
             ],
             "version": "==1.0.1"
+        },
+        "sphinxcontrib-domaintools": {
+            "git": "https://github.com/pizzacat83/domaintools",
+            "ref": "0f6e2ea1aed7998bc21823e18b282e8f8eb140c2"
         },
         "sphinxcontrib-htmlhelp": {
             "hashes": [
