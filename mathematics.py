@@ -1,5 +1,6 @@
 from docutils.parsers.rst import directives
 from sphinxcontrib.domaintools import CustomDomain, GenericObject, custom_domain
+from docutils.nodes import Text
 from sphinx import addnodes
 from sphinx.util import ws_re
 from sphinx.roles import XRefRole
@@ -15,6 +16,20 @@ class MathematicsDomain(CustomDomain):
         cls.object_types[name] = ObjType(name, name)
         cls.directives[name] = directive
         cls.roles[name] = XRefRole()
+
+    def resolve_xref(self, env, fromdocname, builder,
+                     typ, target, node, contnode):
+        if target == contnode.children[0].astext():
+            contnode.children = (
+                [Text('{} {} ({})'.format(
+                    self.directives[typ].prefix,
+                    '1.1.1',  # TODO: use correct number
+                    target
+                ))]
+            )
+        return super().resolve_xref(env, fromdocname, builder,
+                                    typ, ws_re.sub('', target), node, contnode)
+
 
 class Theorem(GenericObject):
     indextemplate = 'single:%s;'
@@ -38,4 +53,3 @@ def setup(app):
     MathematicsDomain.add_directive('theorem', Theorem)
     app.add_domain(MathematicsDomain)
 
-        return name
