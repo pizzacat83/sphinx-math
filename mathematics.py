@@ -1,18 +1,19 @@
-from docutils.parsers.rst import directives
-from sphinxcontrib.domaintools import CustomDomain, GenericObject, custom_domain
 from docutils.nodes import Text
+from docutils.parsers.rst import directives
 from sphinx import addnodes
-from sphinx.util import ws_re
+from sphinx.domains import ObjType
 from sphinx.roles import XRefRole
-from sphinx.domains import Domain, ObjType
+from sphinx.util import ws_re
+from sphinxcontrib.domaintools import CustomDomain, GenericObject
 
 
 class MathematicsDomain(CustomDomain):
     name = 'm'
     label = 'Mathematics'
+
     @classmethod
     def add_directive(cls, name, directive):
-        directive.domain=cls
+        directive.domain = cls
         cls.object_types[name] = ObjType(name, name)
         cls.directives[name] = directive
         cls.roles[name] = XRefRole()
@@ -36,14 +37,14 @@ class Theorem(GenericObject):
     prefix = '定理'
     object_spec = {
         'noindex': directives.flag,
-        'anonymous' : directives.flag,
+        'anonymous': directives.flag,
     }
 
     def parse_node(self, env, sig, signode):
         signode += addnodes.desc_name(self.prefix, self.prefix)
         signode += addnodes.desc_type(' ', ' ')
 
-        signode += addnodes.desc_type(*['({})'.format(sig)]*2) # 第2引数が見た目になる
+        signode += addnodes.desc_type(*['({})'.format(sig)]*2)  # 第2引数が見た目になる
         name = ws_re.sub('', sig)
         return name
 
