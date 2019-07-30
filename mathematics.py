@@ -37,10 +37,6 @@ class MathematicsDomain(CustomDomain):
                                     typ, ws_re.sub('', target), node, contnode)
 
 
-
-    '''
-
-
 class MathematicsObject(GenericObject):
     indextemplate = 'single:%s;'
     prefix = ''
