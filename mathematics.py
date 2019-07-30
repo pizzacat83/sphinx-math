@@ -14,9 +14,13 @@ class MathematicsDomain(CustomDomain):
     @classmethod
     def add_directive(cls, name, directive):
         directive.domain = cls
-        cls.object_types[name] = ObjType(name, name)
         cls.directives[name] = directive
+
+    @classmethod
+    def add_object(cls, name, directive):
+        cls.object_types[name] = ObjType(name, name)
         cls.roles[name] = XRefRole()
+        cls.add_directive(name, directive)
 
     def resolve_xref(self, env, fromdocname, builder,
                      typ, target, node, contnode):
@@ -32,9 +36,13 @@ class MathematicsDomain(CustomDomain):
                                     typ, ws_re.sub('', target), node, contnode)
 
 
-class Theorem(GenericObject):
+
+    '''
+
+
+class MathematicsObject(GenericObject):
     indextemplate = 'single:%s;'
-    prefix = '定理'
+    prefix = ''
     object_spec = {
         'noindex': directives.flag,
         'anonymous': directives.flag,
@@ -49,8 +57,10 @@ class Theorem(GenericObject):
         return name
 
 
+class Theorem(MathematicsObject):
+    prefix = '定理'
 
 def setup(app):
-    MathematicsDomain.add_directive('theorem', Theorem)
+    MathematicsDomain.add_object('thm', Theorem)
     app.add_domain(MathematicsDomain)
 
