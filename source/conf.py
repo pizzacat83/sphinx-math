@@ -17,7 +17,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'Math Practice'
+project = 'Sphinx-Math Demo'
 copyright = '2019, pizzacat83'
 author = 'pizzacat83'
 
@@ -31,8 +31,13 @@ release = '0.1.0'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    'mathematics'
+    'mathematics',
+    'sphinx.ext.mathjax',
 ]
+
+mathjax_path = (
+    'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML'
+)
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
