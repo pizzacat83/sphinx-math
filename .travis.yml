@@ -10,7 +10,7 @@ install:
     - pipenv install travis-sphinx
 
 script:
-    - pipenv run travis-sphinx build
+    - pipenv run travis-sphinx -s source build
 
 after_success:
     - pipenv run travis-sphinx deploy
