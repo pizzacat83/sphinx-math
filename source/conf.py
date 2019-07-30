@@ -17,7 +17,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'Math Practice'
+project = 'Sphinx-Math Demo'
 copyright = '2019, pizzacat83'
 author = 'pizzacat83'
 
@@ -31,7 +31,13 @@ release = '0.1.0'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
+    'mathematics',
+    'sphinx.ext.mathjax',
 ]
+
+mathjax_path = (
+    'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML'
+)
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -61,15 +67,3 @@ html_theme = 'sphinx_rtd_theme'
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 
-
-from sphinxcontrib.domaintools import custom_domain
-
-def setup(app):
-    app.add_domain(custom_domain('MathDomain',
-        name  = 'm',
-        label = "Mathematics",
-
-        elements = dict(
-            define = dict(),
-            theorem = dict(),
-        )))
