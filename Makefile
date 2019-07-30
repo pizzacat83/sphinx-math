@@ -1,5 +1,7 @@
 # Minimal makefile for Sphinx documentation
-#
+
+# touch document to re-render (dev-only)
+$(shell touch source/demo-page.rst)
 
 # You can set these variables from the command line, and also
 # from the environment for the first two.
