@@ -60,7 +60,17 @@ class MathematicsObject(GenericObject):
 class Theorem(MathematicsObject):
     prefix = '定理'
 
+
+class Definition(MathematicsObject):
+    prefix = '定義'
+
+
+class Proposition(MathematicsObject):
+    prefix = '命題'
+
 def setup(app):
     MathematicsDomain.add_object('thm', Theorem)
+    MathematicsDomain.add_object('def', Definition)
+    MathematicsDomain.add_object('prop', Proposition)
     app.add_domain(MathematicsDomain)
 
