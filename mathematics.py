@@ -38,7 +38,7 @@ class MathematicsDomain(CustomDomain):
 
 
 class MathematicsObject(GenericObject):
-    indextemplate = 'single:%s;'
+    indextemplate = 'single:%s'
     prefix = ''
     object_spec = {
         'noindex': directives.flag,
