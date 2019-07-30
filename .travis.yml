@@ -13,4 +13,4 @@ script:
     - pipenv run travis-sphinx -s source build
 
 after_success:
-    - pipenv run travis-sphinx deploy
+    - pipenv run travis-sphinx -s source deploy
