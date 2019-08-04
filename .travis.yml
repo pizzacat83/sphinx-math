@@ -10,7 +10,7 @@ install:
     - pipenv install travis-sphinx
 
 script:
-    - cp mathematics.py source/
+    - pipenv run python -c "import os;print(os.getcwd())"
     - pipenv run travis-sphinx build -s source
 
 after_success:
