@@ -6,11 +6,11 @@ before_install:
     - pip install --user pipenv
 
 install:
-    - pipenv --three install
+    - pipenv --three sync
     - pipenv install travis-sphinx
 
 script:
-    - ls
+    - cp mathematics.py source/
     - pipenv run travis-sphinx build -s source
 
 after_success:
