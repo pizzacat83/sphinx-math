@@ -17,4 +17,4 @@ script:
    - travis-sphinx build -s source
 
 after_success:
-    - travis-sphinx deploy -b travis-auto-deploy
+    - travis-sphinx deploy
