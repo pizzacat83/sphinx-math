@@ -109,4 +109,3 @@ def setup(app):
     MathematicsDomain.add_directive('pf', Proof)
     ProofAdmonition.register(app)
     app.add_domain(MathematicsDomain)
-

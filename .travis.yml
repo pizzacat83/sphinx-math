@@ -1,0 +1,20 @@
+language: python
+python:
+    - "3.7"
+
+before_install:
+    - sudo pip install pipenv
+
+install:
+    - pipenv --three sync
+    - pipenv install travis-sphinx .
+
+before_script:
+    - mkdir source/_static
+    - mkdir source/_templates
+
+script:
+   - travis-sphinx build -s source
+
+after_success:
+    - travis-sphinx deploy
