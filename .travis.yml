@@ -10,9 +10,10 @@ before_install:
 install:
     - pipenv --three sync
     - pipenv install travis-sphinx
+    - pipenv install .
 
 script:
-    - pipenv run python -c "import mathematics"
+    - pipenv run python -c "import bastet"
     - pipenv run travis-sphinx build -s source
 
 after_success:
