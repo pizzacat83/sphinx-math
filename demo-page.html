@@ -1,0 +1,244 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="ja" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ja" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>1. 線形写像 &mdash; Sphinx-Math Demo 0.1.0 ドキュメント</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript" src="_static/translations.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="検索" href="search.html" />
+    <link rel="prev" title="Welcome to Sphinx-Math Demo documentation!" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Sphinx-Math Demo
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">1. 線形写像</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">1.1. 線形写像</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Sphinx-Math Demo</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>1. 線形写像</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/demo-page.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>1. 線形写像<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<div class="section" id="id2">
+<h2>1.1. 線形写像<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<dl class="def">
+<dt id="def-線形写像">
+<code class="sig-name descname">定義</code> (線形写像)<a class="headerlink" href="#def-線形写像" title="この定義へのパーマリンク">¶</a></dt>
+<dd><div class="line-block">
+<div class="line"><span class="math notranslate nohighlight">\(f:\mathbb{R}^{n}\rightarrow \mathbb{R}^{m}\)</span> :線形写像</div>
+<div class="line-block">
+<div class="line"><span class="math notranslate nohighlight">\(\overset{\mathrm{def}}{\Leftrightarrow}\mathbb{R}^n\)</span> の任意のベクトル <span class="math notranslate nohighlight">\(\boldsymbol{v}, \boldsymbol{w}\)</span> および任意の実数 <span class="math notranslate nohighlight">\(\lambda, \mu\)</span> に対し，</div>
+</div>
+</div>
+<div class="math notranslate nohighlight">
+\[(\lambda \boldsymbol{v}+\mu \boldsymbol{w}) = \lambda f(\boldsymbol{v}) + \mu f(\boldsymbol{w})\]</div>
+</dd></dl>
+
+<dl class="prop">
+<dt id="prop-線形写像の合成">
+<code class="sig-name descname">命題</code> (線形写像の合成)<a class="headerlink" href="#prop-線形写像の合成" title="この定義へのパーマリンク">¶</a></dt>
+<dd><div class="line-block">
+<div class="line"><span class="math notranslate nohighlight">\(f:\mathbb{R}^{n}\rightarrow \mathbb{R}^{m},\ g:\mathbb{R}^{m}\rightarrow \mathbb{R}^{l}\)</span> : 線形</div>
+<div class="line-block">
+<div class="line"><span class="math notranslate nohighlight">\(\Rightarrow g\circ f: \mathbb{R}^{n}\rightarrow \mathbb{R}^{l}\)</span> : 線形</div>
+</div>
+</div>
+<div class="admonition proof">
+<p class="admonition-title">証明</p>
+<div class="line-block">
+<div class="line"><span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span> の任意のベクトル <span class="math notranslate nohighlight">\(\boldsymbol{v}, \boldsymbol{w}\)</span> および任意の実数 <span class="math notranslate nohighlight">\(\lambda, \mu\)</span> に対し， <a class="reference internal" href="#def-線形写像"><code class="xref m m-def docutils literal notranslate"><span class="pre">定義</span> <span class="pre">1.1.1</span> <span class="pre">(線形写像)</span></code></a> より，</div>
+</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}g \circ f(\lambda\boldsymbol{v} + \mu\boldsymbol{w}) &amp;= g \left( f(\lambda\boldsymbol{v} + \mu\boldsymbol{w}) \right)\\
+   &amp;= g \left( \lambda f(\boldsymbol{v}) + \mu f(\boldsymbol{w}) \right) \\
+   &amp;= \lambda g \circ f(\boldsymbol{v}) + \mu g \circ f(\boldsymbol{w}) \\\end{split}\]</div>
+</div>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to Sphinx-Math Demo documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, pizzacat83
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
