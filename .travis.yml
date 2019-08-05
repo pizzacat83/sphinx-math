@@ -10,7 +10,7 @@ install:
     - pipenv install travis-sphinx .
 
 script:
-    - python -c "import bastet"
+    - python -c "import sys;print(sys.path)"
     - make html
     - travis-sphinx build -s source
 
