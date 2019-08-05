@@ -10,8 +10,8 @@ install:
     - pipenv install travis-sphinx .
 
 script:
-    - python -c "import sys;print(sys.path)"
-    - make html
+    - mkdir source/_static
+    - mkdir source/_templates
     - travis-sphinx build -s source
 
 after_success:
