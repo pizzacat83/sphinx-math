@@ -9,10 +9,12 @@ install:
     - pipenv --three sync
     - pipenv install travis-sphinx .
 
-script:
+before_script:
     - mkdir source/_static
     - mkdir source/_templates
-    - travis-sphinx build -s source
+
+ script:
+   - travis-sphinx build -s source
 
 after_success:
-    - travis-sphinx deploy
+    - travis-sphinx deploy -b travis-auto-deploy
