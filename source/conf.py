@@ -14,6 +14,7 @@ import os
 import sys
 sys.path.insert(0, '')
 print(sys.path)
+print(os.getcwd())
 
 # -- Project information -----------------------------------------------------
 
