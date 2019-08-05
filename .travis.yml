@@ -1,5 +1,3 @@
-dist: bionic
-
 language: python
 python:
     - "3.7"
@@ -9,12 +7,11 @@ before_install:
 
 install:
     - pipenv --three sync
-    - pipenv install travis-sphinx
-    - pipenv install .
+    - pipenv install travis-sphinx .
 
 script:
-    - pipenv run python -c "import bastet"
-    - pipenv run travis-sphinx build -s source
+    - python -c "import bastet"
+    - travis-sphinx build -s source
 
 after_success:
-    - pipenv run travis-sphinx deploy
+    - travis-sphinx deploy
