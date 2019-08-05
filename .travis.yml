@@ -13,7 +13,7 @@ before_script:
     - mkdir source/_static
     - mkdir source/_templates
 
- script:
+script:
    - travis-sphinx build -s source
 
 after_success:
