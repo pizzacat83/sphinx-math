@@ -11,6 +11,7 @@ install:
 
 script:
     - python -c "import bastet"
+    - make html
     - travis-sphinx build -s source
 
 after_success:
